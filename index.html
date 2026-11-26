@@ -1,0 +1,1751 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F3F0E9">
+<meta name="description" content="纪念一二·九运动九十一周年：一九三五年十二月九日，北平大中学生六千余人走上街头。">
+<title>一二·九 · 九十一周年</title>
+<style>
+:root{
+  --paper:#F3F0E9;
+  --paper-deep:#EBE5D8;
+  --ink:#1B1A17;
+  --ink-soft:#3A3832;
+  --muted:#665F54;
+  --red:#A33A2B;
+  --red-light:#D97763;
+  --rule:#C9C1B1;
+  --rule-dark:#AFA694;
+  --serif:"Songti SC","STSong","SimSun","Noto Serif CJK SC","Source Han Serif SC",serif;
+  --sans:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC","Noto Sans CJK SC",sans-serif;
+  --hero-font-a:"Songti SC","STSong","SimSun","Noto Serif CJK SC","Source Han Serif SC",serif;
+  --hero-font-b:"Microsoft YaHei","PingFang SC","Hiragino Sans GB","Source Han Sans SC","Noto Sans CJK SC",sans-serif;
+  --gutter:clamp(20px,5vw,72px);
+  --max:1180px;
+}
+*{box-sizing:border-box}
+html{
+  -webkit-text-size-adjust:100%;
+  scroll-behavior:smooth;
+}
+body{
+  margin:0;
+  background-color:var(--paper);
+  background-image:
+    radial-gradient(ellipse at 50% -20%,rgba(255,255,255,.72),rgba(255,255,255,0) 58%),
+    radial-gradient(ellipse at 100% 100%,rgba(112,88,52,.09),rgba(112,88,52,0) 56%),
+    radial-gradient(ellipse at 0% 65%,rgba(112,88,52,.045),rgba(112,88,52,0) 40%);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:clamp(17px,.34vw + 16.1px,19px);
+  line-height:1.9;
+  letter-spacing:.01em;
+  overflow-x:hidden;
+  text-rendering:optimizeLegibility;
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='%68%74%74%70://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.07'/%3E%3C/svg%3E");
+}
+::selection{background:var(--red);color:var(--paper)}
+a{color:inherit}
+button{font:inherit}
+img,svg{max-width:100%}
+.term{white-space:nowrap}
+h1,h2,h3,h4,p,blockquote,figure{margin:0}
+h1,h2,h3,h4,.serif{font-family:var(--serif);font-weight:500}
+:focus-visible{outline:2px solid var(--red);outline-offset:5px}
+
+.hero,main,.footer{position:relative;z-index:1}
+
+.progress{
+  position:fixed;
+  inset:0 0 auto 0;
+  height:2px;
+  z-index:100;
+  pointer-events:none;
+}
+.progress span{
+  display:block;
+  width:100%;
+  height:100%;
+  background:var(--red);
+  transform:scaleX(0);
+  transform-origin:0 50%;
+}
+
+.wrap{width:100%;max-width:var(--max);margin-inline:auto}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;
+  min-height:100vh;
+  min-height:100svh;
+  display:flex;
+  padding:clamp(18px,3vw,38px) var(--gutter) clamp(18px,2.6vw,30px);
+  border-bottom:1px solid var(--rule);
+  overflow:hidden;
+}
+.hero-inner{
+  position:relative;
+  z-index:2;
+  width:100%;
+  max-width:var(--max);
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+}
+.hero-ghost{
+  position:absolute;
+  right:-.06em;
+  bottom:-.18em;
+  z-index:0;
+  font-family:var(--hero-font-b);
+  font-weight:700;
+  font-size:clamp(180px,30vw,430px);
+  line-height:.74;
+  letter-spacing:-.05em;
+  color:transparent;
+  -webkit-text-stroke:1px var(--ink);
+  opacity:.07;
+  pointer-events:none;
+  user-select:none;
+}
+@supports not (-webkit-text-stroke:1px black){
+  .hero-ghost{color:var(--ink);opacity:.045}
+}
+.hero-lines{
+  position:absolute;
+  inset:0;
+  z-index:0;
+  width:100%;
+  height:100%;
+  color:var(--ink);
+  opacity:.075;
+  pointer-events:none;
+}
+.hero-lines .accent{color:var(--red);opacity:.55}
+.hero-top{
+  display:flex;
+  justify-content:space-between;
+  gap:24px;
+  padding-bottom:13px;
+  border-bottom:1px solid var(--ink);
+  font-size:13px;
+  line-height:1.6;
+  letter-spacing:.18em;
+  color:var(--muted);
+}
+.hero-top b{font-weight:400;color:var(--red);letter-spacing:.12em}
+.hero-main{
+  flex:1;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(140px,215px);
+  align-items:center;
+  gap:clamp(24px,4.5vw,72px);
+  padding:clamp(14px,2vh,32px) 0 clamp(6px,1vh,14px);
+}
+.hero-kicker{
+  font-size:14px;
+  line-height:1.7;
+  letter-spacing:.26em;
+  color:var(--red);
+  margin-bottom:clamp(16px,2.6vh,30px);
+}
+.hero h1{
+  font-size:clamp(56px,12vw,168px);
+  line-height:.8;
+  letter-spacing:.02em;
+  font-family:var(--hero-font-b);
+  font-weight:700;
+  display:flex;
+  align-items:baseline;
+  white-space:nowrap;
+}
+.hero h1.font-a{
+  font-family:var(--hero-font-a);
+  font-weight:500;
+}
+.hero h1 span{display:inline-block}
+.hero h1 .two{margin-left:.1em}
+.hero h1 .dot{
+  font-size:.4em;
+  line-height:1;
+  font-weight:400;
+  color:var(--red);
+  letter-spacing:0;
+  margin:0 .075em;
+  transform:translateY(-.18em);
+}
+.hero h1 .nine{color:var(--red)}
+.hero-dek{
+  margin-top:clamp(16px,2.6vh,28px);
+  padding-top:clamp(16px,2.6vh,24px);
+  border-top:1px solid var(--rule);
+  max-width:26em;
+  font-size:clamp(18px,1.35vw,20px);
+  line-height:1.9;
+  color:var(--ink-soft);
+  text-wrap:balance;
+}
+.hero-dek br{display:none}
+.hero-aside{
+  align-self:stretch;
+  min-height:clamp(230px,36vh,390px);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  align-items:flex-end;
+  border-left:1px solid var(--rule);
+  padding-left:clamp(16px,2vw,28px);
+}
+.seal{
+  width:clamp(52px,4.8vw,68px);
+  aspect-ratio:1;
+  transform:rotate(-2deg);
+  border:1px solid var(--red);
+  position:relative;
+  color:var(--red);
+  display:grid;
+  place-content:center;
+  text-align:center;
+  font-family:var(--serif);
+  font-size:clamp(14px,1.2vw,17px);
+  line-height:1.10;
+  letter-spacing:.16em;
+  padding-left:.16em;
+}
+.seal::after{
+  content:"";
+  position:absolute;
+  inset:3px;
+  border:1px solid var(--red);
+  opacity:.55;
+}
+.hero-vertical{
+  writing-mode:vertical-rl;
+  text-orientation:upright;
+  font-family:var(--serif);
+  font-size:clamp(38px,4.6vw,72px);
+  line-height:1;
+  letter-spacing:.34em;
+  color:var(--ink);
+  opacity:.22;
+}
+.hero-date{
+  font-size:13px;
+  line-height:1.5;
+  letter-spacing:.13em;
+  color:var(--red);
+  font-variant-numeric:tabular-nums;
+}
+.hero-quote{
+  --quote-gutter:max(var(--gutter), calc((100vw - var(--max)) / 2));
+  margin:clamp(16px,1.8vh,26px) calc(-1 * var(--quote-gutter)) 0;
+  padding:clamp(26px,4vw,50px) var(--quote-gutter);
+  background:var(--ink);
+  color:var(--paper);
+  position:relative;
+}
+.hero-quote::before{
+  content:"";
+  position:absolute;
+  left:var(--quote-gutter);
+  top:clamp(26px,4vw,50px);
+  width:1px;
+  height:clamp(30px,3.4vw,46px);
+  background:var(--red-light);
+  opacity:.8;
+}
+.hero-quote-text{
+  font-family:var(--serif);
+  font-size:clamp(22px,2.5vw,36px);
+  line-height:1.6;
+  letter-spacing:.02em;
+  padding-left:clamp(14px,1.8vw,22px);
+}
+.hero-quote-src{
+  margin-top:clamp(14px,2vw,22px);
+  padding-left:clamp(14px,1.8vw,22px);
+  font-size:13px;
+  line-height:1.8;
+  letter-spacing:.06em;
+  color:#B9B2A4;
+}
+.hero-bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:24px;
+  padding-top:16px;
+  border-top:1px solid var(--rule);
+  font-size:13px;
+  line-height:1.7;
+  letter-spacing:.13em;
+  color:var(--muted);
+}
+.scroll-cue{
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+  color:var(--ink);
+  white-space:nowrap;
+}
+.scroll-cue i{
+  position:relative;
+  display:block;
+  width:42px;
+  height:1px;
+  background:var(--ink);
+  transition:width .3s ease;
+}
+.scroll-cue i::after{
+  content:"";
+  position:absolute;
+  right:0;
+  top:-3px;
+  width:7px;
+  height:7px;
+  border-right:1px solid var(--ink);
+  border-bottom:1px solid var(--ink);
+  transform:rotate(45deg);
+}
+.hero-kicker,.hero h1,.hero-dek,.hero-aside,.hero-bottom,.hero-quote{
+  animation:hero-in .9s cubic-bezier(.2,.7,.2,1) both;
+}
+.hero-quote{animation-delay:.42s}
+.hero h1{animation-delay:.08s}
+.hero-dek{animation-delay:.16s}
+.hero-aside{animation-delay:.24s}
+.hero-bottom{animation-delay:.3s}
+@keyframes hero-in{
+  from{opacity:0;transform:translateY(16px)}
+  to{opacity:1;transform:none}
+}
+
+/* ---------- chapters ---------- */
+.chapter{
+  padding:clamp(72px,10vw,148px) var(--gutter);
+  border-bottom:1px solid var(--rule);
+}
+.chapter-inner{width:100%;max-width:var(--max);margin-inline:auto}
+.chapter-head{
+  display:grid;
+  grid-template-columns:72px minmax(0,1fr) 28px;
+  gap:clamp(16px,3vw,48px);
+  align-items:start;
+  margin-bottom:clamp(40px,7vw,84px);
+}
+.chapter-no{
+  padding-top:9px;
+  border-top:1px solid var(--red);
+  color:var(--red);
+  font-family:var(--serif);
+  font-size:14px;
+  line-height:1;
+  letter-spacing:.18em;
+}
+.chapter-title{
+  font-size:clamp(34px,4.6vw,64px);
+  line-height:1.15;
+  letter-spacing:.02em;
+}
+.chapter-kicker{
+  justify-self:end;
+  writing-mode:vertical-rl;
+  text-orientation:upright;
+  font-size:13px;
+  line-height:1;
+  letter-spacing:.22em;
+  color:var(--muted);
+  padding-top:5px;
+}
+
+/* reveal */
+.js .reveal{
+  opacity:0;
+  transform:translateY(16px);
+  transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1);
+}
+.js .reveal.is-visible{opacity:1;transform:none}
+.js .sequence > *{
+  opacity:0;
+  transform:translateY(18px);
+  transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1);
+  transition-delay:calc(var(--i,0) * 130ms);
+}
+.js .sequence.is-visible > *{opacity:1;transform:none}
+
+/* ---------- 01 ---------- */
+.context{
+  display:grid;
+  grid-template-columns:minmax(0,5fr) minmax(0,6fr);
+  gap:clamp(32px,8vw,116px);
+  align-items:start;
+}
+.context-lead{
+  font-family:var(--serif);
+  font-size:clamp(24px,2.8vw,36px);
+  line-height:1.55;
+  letter-spacing:.01em;
+}
+.context-lead > span{display:block}
+.context-lead > span + span{margin-top:.55em}
+.context-lead .red{color:var(--red);white-space:nowrap}
+.context-body{padding-top:.35em}
+.context-body p{
+  max-width:31em;
+  margin-bottom:1.35em;
+  color:var(--ink-soft);
+  text-wrap:pretty;
+}
+.context-table{
+  margin-top:clamp(30px,5vw,54px);
+  border-top:1px solid var(--ink);
+}
+.context-row{
+  display:grid;
+  grid-template-columns:7.5em 1fr;
+  gap:16px;
+  padding:14px 0;
+  border-bottom:1px solid var(--rule);
+}
+.context-key{
+  color:var(--red);
+  font-size:15px;
+  line-height:1.8;
+  letter-spacing:.13em;
+  padding-top:.25em;
+}
+.context-value{font-family:var(--serif);font-size:clamp(17px,1.6vw,20px);line-height:1.7}
+
+/* ---------- historical photos ---------- */
+.hist{
+  min-width:0;
+  max-width:640px;
+  margin:0 0 44px;
+}
+.hist-right{margin-left:auto}
+.hist-small{max-width:360px}
+.hist-medium{max-width:480px}
+.hist-doc{max-width:300px}
+.hist img{
+  width:100%;
+  height:auto;
+  display:block;
+  border:1px solid var(--rule);
+  background:#fbfaf7;
+  transition:transform .35s ease,box-shadow .35s ease;
+}
+.hist figcaption{
+  margin-top:10px;
+  font-size:16px;
+  line-height:1.85;
+  color:var(--muted);
+  text-wrap:pretty;
+}
+.hist-pair{
+  min-width:0;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:clamp(20px,4vw,40px);
+  margin:0 0 44px;
+  align-items:stretch;
+}
+.hist-pair .hist{max-width:none;margin:0}
+.hist-pair .hist img{aspect-ratio:3/2;object-fit:contain;background:#fbfaf7}
+.casualty + .hist-pair{margin-top:clamp(36px,5vw,56px)}
+.slogans .hist img{border-color:rgba(243,240,233,.3);background:#111}
+.slogans .hist figcaption{color:#B9B2A4}
+.slogan-list + .hist{margin-top:clamp(36px,5vw,56px)}
+.dec16-grid + .hist,
+.record-list + .hist,
+.quote-attribution + .hist{margin-top:clamp(36px,5vw,56px)}
+
+.chapter-note{
+  max-width:36em;
+  margin-top:clamp(28px,4vw,44px);
+  padding-left:14px;
+  border-left:1px solid var(--rule);
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.9;
+}
+.chapter-note p + p{margin-top:.55em}
+.quote-context{
+  max-width:34em;
+  margin:0 0 clamp(20px,3vw,32px);
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.9;
+}
+
+.tl-thumb-wrap{display:none}
+@media (min-width:900px){
+  .tl-thumb-wrap{display:block;min-height:64px;margin-bottom:12px}
+}
+.tl-thumb{
+  display:block;
+  width:64px;
+  height:64px;
+  object-fit:contain;
+  border:1px solid var(--rule);
+  margin-bottom:0;
+  background:#fbfaf7;
+  position:relative;
+  z-index:1;
+  transform-origin:0 0;
+  transition:transform .28s cubic-bezier(.2,.7,.2,1),box-shadow .28s ease;
+}
+@media (min-width:900px){
+  .timeline-scroll{overflow:visible}
+}
+
+/* ---------- 02 ---------- */
+.dec9-top{display:block}
+.figure{
+  font-family:var(--serif);
+  font-size:clamp(66px,10vw,134px);
+  line-height:.9;
+  letter-spacing:-.04em;
+}
+.figure small{
+  display:block;
+  margin-top:.72em;
+  font-family:var(--sans);
+  font-size:15px;
+  line-height:1.7;
+  letter-spacing:.18em;
+  color:var(--red);
+}
+.event-list{
+  --event-pad:clamp(28px,4vw,48px);
+  position:relative;
+  margin-top:clamp(42px,7vw,78px);
+  padding-left:var(--event-pad);
+}
+.event-list::before{
+  content:"";
+  position:absolute;
+  left:4px;
+  top:.7em;
+  bottom:.7em;
+  width:1px;
+  background:var(--rule);
+  transform:scaleY(0);
+  transform-origin:top;
+  transition:transform 1.2s ease;
+}
+.event-list.is-visible::before{transform:scaleY(1)}
+.event{
+  position:relative;
+  display:grid;
+  grid-template-columns:minmax(110px,1.7fr) minmax(0,7fr);
+  gap:clamp(18px,4vw,52px);
+  padding-bottom:clamp(30px,5vw,48px);
+}
+.event:last-child{padding-bottom:0}
+.event::before{
+  content:"";
+  position:absolute;
+  left:calc(-1 * var(--event-pad));
+  top:.55em;
+  width:9px;
+  height:9px;
+  background:var(--red);
+  transform:scale(0);
+  transition:transform .4s ease calc(var(--i,0) * 130ms + .2s);
+}
+.sequence.is-visible .event::before{transform:scale(1)}
+.event-label{
+  font-family:var(--serif);
+  font-size:clamp(18px,1.8vw,23px);
+  line-height:1.6;
+}
+.event-label small{
+  display:block;
+  margin-top:2px;
+  font-family:var(--sans);
+  font-size:14px;
+  line-height:1.7;
+  letter-spacing:.10em;
+  color:var(--muted);
+}
+.event-text{
+  max-width:34em;
+  color:var(--ink-soft);
+  text-wrap:pretty;
+}
+.casualty{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:baseline;
+  gap:8px 26px;
+  margin-top:clamp(38px,6vw,64px);
+  padding:15px 0;
+  border-top:1px solid var(--ink);
+  border-bottom:1px solid var(--ink);
+}
+.casualty-label{
+  font-size:14px;
+  line-height:1.8;
+  letter-spacing:.12em;
+  color:var(--muted);
+}
+.casualty b{
+  font-family:var(--serif);
+  font-size:clamp(20px,2.2vw,28px);
+  font-weight:400;
+  line-height:1.5;
+}
+.casualty b em{font-style:normal;color:var(--red)}
+.casualty .slash{color:var(--rule-dark)}
+.dec9-record{margin-top:clamp(28px,4vw,44px)}
+.dec9-record .record-body{grid-template-columns:minmax(0,1fr)}
+.dec9-follow{
+  margin:clamp(28px,4vw,44px) 0 0;
+  padding-top:14px;
+  border-top:1px solid var(--rule);
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.85;
+}
+
+/* ---------- 03 ---------- */
+.slogans{
+  background:var(--ink);
+  color:var(--paper);
+  border-bottom:1px solid var(--ink);
+}
+.slogans .chapter-no{color:var(--red-light);border-color:var(--red-light)}
+.slogans .chapter-title{color:var(--paper)}
+.slogans .chapter-kicker{color:#9C9587}
+.slogan-intro{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  gap:24px;
+  margin-top:-.6em;
+  margin-bottom:26px;
+  font-size:14px;
+  line-height:1.8;
+  letter-spacing:.08em;
+  color:#B9B2A4;
+}
+.slogan-list{border-top:1px solid rgba(243,240,233,.34)}
+.slogan{border-bottom:1px solid rgba(243,240,233,.22)}
+.slogan-btn{
+  width:100%;
+  display:grid;
+  grid-template-columns:3.4em minmax(0,1fr) 18px;
+  gap:clamp(12px,2.4vw,24px);
+  align-items:center;
+  padding:clamp(16px,2.4vw,26px) 0;
+  border:0;
+  background:none;
+  color:inherit;
+  text-align:left;
+  cursor:pointer;
+}
+.slogan-no{
+  font-family:var(--serif);
+  font-size:14px;
+  line-height:1.7;
+  letter-spacing:.16em;
+  color:#9C9587;
+}
+.slogan-text{
+  font-family:var(--serif);
+  font-size:clamp(26px,4.7vw,62px);
+  line-height:1.3;
+  letter-spacing:.02em;
+  transition:color .3s ease;
+}
+.slogan.is-open .slogan-text{color:#FFFFFF}
+.slogan-toggle{
+  position:relative;
+  justify-self:end;
+  width:14px;
+  height:14px;
+}
+.slogan-toggle::before,
+.slogan-toggle::after{
+  content:"";
+  position:absolute;
+  background:var(--red-light);
+  transition:transform .35s ease;
+}
+.slogan-toggle::before{left:0;top:6px;width:14px;height:1px}
+.slogan-toggle::after{left:6px;top:0;width:1px;height:14px}
+.slogan.is-open .slogan-toggle::after{transform:scaleY(0)}
+.slogan-panel{
+  display:grid;
+  grid-template-rows:0fr;
+  transition:grid-template-rows .4s cubic-bezier(.2,.7,.2,1);
+}
+.slogan.is-open .slogan-panel{grid-template-rows:1fr}
+.slogan-panel-inner{overflow:hidden}
+.slogan-fact{
+  display:grid;
+  grid-template-columns:3.4em minmax(0,1fr);
+  gap:clamp(12px,2.4vw,24px);
+  padding:0 0 clamp(22px,3vw,32px);
+  color:#D6D0C3;
+  font-size:clamp(17px,1.45vw,18px);
+  line-height:1.85;
+}
+.slogan-fact-label{
+  padding-top:.35em;
+  font-size:12px;
+  line-height:1.8;
+  letter-spacing:.16em;
+  color:#B9B2A4;
+}
+.slogan-fact p{max-width:39em;margin:0;text-wrap:pretty}
+
+/* ---------- 04 ---------- */
+.dec16-lead{
+  max-width:32em;
+  margin-bottom:clamp(28px,4vw,44px);
+  font-family:var(--serif);
+  font-size:clamp(20px,2.2vw,28px);
+  line-height:1.7;
+  text-wrap:pretty;
+}
+.dec16-grid{
+  display:grid;
+  grid-template-columns:minmax(0,6fr) minmax(0,5fr);
+  gap:clamp(32px,7vw,96px);
+  align-items:end;
+}
+.dec16-copy{
+  border-left:1px solid var(--rule);
+  padding-left:clamp(20px,3.6vw,42px);
+  color:var(--ink-soft);
+}
+.dec16-copy p{
+  max-width:27em;
+  font-size:clamp(17px,1.7vw,21px);
+  line-height:1.85;
+  text-wrap:pretty;
+}
+.dec16-copy p + p{margin-top:1.15em}
+.dec16-copy .red{color:var(--red)}
+.dec16-copy .note{
+  margin-top:1.7em;
+  font-size:15px;
+  line-height:1.8;
+  letter-spacing:.15em;
+  color:var(--muted);
+}
+.dec16-date{
+  display:flex;
+  align-items:baseline;
+  gap:14px;
+  margin-bottom:clamp(22px,3vw,34px);
+  padding-bottom:12px;
+  border-bottom:1px solid var(--ink);
+  font-size:15px;
+  line-height:1.7;
+  letter-spacing:.16em;
+  color:var(--muted);
+}
+.dec16-date b{
+  font-family:var(--serif);
+  font-size:17px;
+  font-weight:400;
+  letter-spacing:.04em;
+  color:var(--red);
+  font-variant-numeric:tabular-nums;
+}
+
+/* ---------- 05 ---------- */
+.after-lead{
+  max-width:25em;
+  margin-bottom:clamp(36px,6vw,62px);
+  font-family:var(--serif);
+  font-size:clamp(24px,2.9vw,38px);
+  line-height:1.6;
+}
+.record-list{border-top:1px solid var(--ink)}
+.dec9-record{border-top:0}
+.record{
+  display:grid;
+  grid-template-columns:9.5em minmax(0,1fr);
+  gap:clamp(18px,4vw,54px);
+  align-items:baseline;
+  padding:clamp(18px,2.5vw,26px) 0;
+  border-bottom:1px solid var(--rule);
+  scroll-margin-top:32px;
+}
+.record-date{
+  color:var(--red);
+  font-family:var(--serif);
+  font-size:clamp(20px,2vw,27px);
+  line-height:1.5;
+  letter-spacing:.03em;
+  font-variant-numeric:tabular-nums;
+}
+.record-body{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1.9fr);
+  gap:clamp(14px,3vw,36px);
+  align-items:baseline;
+}
+.record-title{
+  font-family:var(--serif);
+  font-size:clamp(19px,2vw,26px);
+  line-height:1.55;
+}
+.record-text{
+  max-width:33em;
+  color:var(--ink-soft);
+  font-size:clamp(17px,1.45vw,18px);
+  line-height:1.85;
+  text-wrap:pretty;
+}
+
+/* ---------- 06 ---------- */
+.quote-section{
+  background:var(--paper-deep);
+  border-bottom:1px solid var(--rule);
+}
+.quote-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:24px;
+}
+.quote-head .chapter-no{margin:0}
+.quote-mark{
+  height:.8em;
+  color:var(--red);
+  font-family:var(--serif);
+  font-size:clamp(74px,9vw,142px);
+  line-height:.6;
+  opacity:.9;
+}
+.quote-block{padding:clamp(34px,6vw,70px) 0 clamp(30px,5vw,56px)}
+.quote-text{
+  font-family:var(--serif);
+  font-size:clamp(25px,5.2vw,72px);
+  line-height:1.58;
+  letter-spacing:.02em;
+  font-weight:500;
+}
+.quote-line{white-space:nowrap}
+.qchar{
+  display:inline-block;
+  opacity:0;
+  transform:translateY(.16em);
+  filter:blur(2px);
+  transition:opacity .55s ease,transform .55s ease,filter .55s ease;
+  transition-delay:calc(var(--i,0) * 44ms);
+}
+.quote-section.is-in .qchar{opacity:1;transform:none;filter:none}
+.quote-attribution{
+  width:min(100%,34em);
+  margin-left:auto;
+  padding-top:16px;
+  border-top:1px solid var(--ink);
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.85;
+  letter-spacing:.02em;
+}
+.quote-attribution .name{
+  color:var(--ink);
+  font-family:var(--serif);
+  font-size:1.25em;
+  letter-spacing:.04em;
+}
+.quote-attribution .work{color:var(--ink-soft)}
+.quote-attribution .date{
+  display:block;
+  margin-top:5px;
+  color:var(--red);
+  font-size:12px;
+  letter-spacing:.16em;
+}
+.sr-only{
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border:0;
+}
+
+/* ---------- 07 ---------- */
+.chrono-note{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  gap:8px 20px;
+  margin-top:-.5em;
+  margin-bottom:24px;
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.8;
+  letter-spacing:.12em;
+}
+.hint-narrow{display:none}
+.timeline-scroll{
+  overflow-x:auto;
+  padding-bottom:14px;
+  -webkit-overflow-scrolling:touch;
+  scroll-snap-type:x proximity;
+  scrollbar-color:var(--rule-dark) transparent;
+  scrollbar-width:thin;
+}
+.timeline-cap{
+  min-width:760px;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  padding-bottom:10px;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.6;
+  letter-spacing:.14em;
+}
+.timeline{
+  min-width:760px;
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  border-top:1px solid var(--ink);
+}
+.tl-item{
+  min-width:0;
+  border-right:1px solid var(--rule);
+  scroll-snap-align:start;
+}
+.tl-item:last-child{border-right:0}
+.tl-btn{
+  position:relative;
+  display:block;
+  padding:26px 18px 6px 0;
+  text-decoration:none;
+}
+.tl-btn::before{
+  content:"";
+  position:absolute;
+  top:-4px;
+  left:0;
+  width:7px;
+  height:7px;
+  background:var(--red);
+  transition:transform .25s ease;
+}
+.tl-btn:focus-visible::before{transform:scale(1.55)}
+.tl-date{
+  display:block;
+  position:relative;
+  z-index:7;
+  background:var(--paper);
+  width:fit-content;
+  padding:0 6px 0 0;
+  color:var(--red);
+  font-family:var(--serif);
+  font-size:16px;
+  line-height:1.5;
+  letter-spacing:.03em;
+  font-variant-numeric:tabular-nums;
+}
+.tl-name{
+  display:block;
+  margin-top:11px;
+  font-family:var(--serif);
+  font-size:clamp(18px,1.8vw,24px);
+  line-height:1.4;
+  transition:color .25s ease;
+}
+.tl-sub{
+  display:block;
+  margin-top:4px;
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.7;
+  letter-spacing:.07em;
+}
+.tl-btn[aria-current="location"] .tl-name{color:var(--red)}
+.tl-btn:focus-visible .tl-thumb{
+  transform:scale(2.4);
+  z-index:6;
+  box-shadow:0 12px 34px rgba(27,26,23,.28);
+}
+@media (hover:hover) and (pointer:fine){
+  .scroll-cue:hover i{width:58px}
+  .slogan-btn:hover .slogan-text{color:#FFFFFF}
+  .tl-btn:hover::before{transform:scale(1.55)}
+  .tl-btn:hover .tl-name{color:var(--red)}
+  .hist:hover img{
+    transform:scale(1.03);
+    box-shadow:0 10px 30px rgba(27,26,23,.18);
+  }
+  .tl-btn:hover .tl-thumb{
+    transform:scale(2.4);
+    z-index:6;
+    box-shadow:0 12px 34px rgba(27,26,23,.28);
+  }
+}
+
+/* ---------- footer ---------- */
+.footer{
+  padding:clamp(38px,6vw,70px) var(--gutter);
+  border-top:1px solid var(--ink);
+}
+.footer-inner{
+  max-width:var(--max);
+  margin-inline:auto;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  gap:clamp(24px,5vw,60px);
+  align-items:end;
+}
+.footer-title{
+  margin-bottom:8px;
+  font-family:var(--serif);
+  font-size:clamp(19px,2vw,24px);
+  line-height:1.5;
+}
+.footer-source{
+  max-width:38em;
+  color:var(--ink-soft);
+  font-size:15px;
+  line-height:1.85;
+  text-wrap:pretty;
+}
+.footer-meta{
+  text-align:right;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.9;
+  letter-spacing:.14em;
+  white-space:nowrap;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:980px){
+  .hero-main{grid-template-columns:minmax(0,1fr) minmax(120px,170px);gap:32px}
+  .hero-aside{min-height:280px}
+  .chapter-head{grid-template-columns:58px minmax(0,1fr) 24px;gap:22px}
+  .context{gap:56px}
+  .dec16-grid{gap:48px}
+}
+@media (max-width:860px){
+  .context{grid-template-columns:minmax(0,1fr);gap:40px}
+  .context-lead{font-size:clamp(26px,4.6vw,36px)}
+}
+@media (max-width:820px){
+  .hist{max-width:100%}
+  .hist-right{margin-left:0}
+  .hist-pair{grid-template-columns:1fr;gap:36px}
+}
+@media (max-width:760px){
+  .hero{padding-bottom:20px}
+  .hero-main{
+    grid-template-columns:minmax(0,1fr);
+    align-items:center;
+    gap:0;
+    padding-top:clamp(20px,4vh,42px);
+  }
+  .hero-aside{display:none}
+  .hero-dek{max-width:22em}
+  .hero-dek br{display:initial}
+  .hero-bottom p{max-width:23em}
+  .chapter-head{grid-template-columns:42px minmax(0,1fr);gap:16px}
+  .chapter-kicker{display:none}
+  .chapter-title{font-size:clamp(32px,7vw,48px)}
+  .context{grid-template-columns:minmax(0,1fr);gap:40px}
+  .context-lead{font-size:clamp(25px,6vw,34px)}
+  .hint-wide{display:none}
+  .hint-narrow{display:inline}
+  .event{grid-template-columns:minmax(0,1fr);gap:6px}
+  .event-label small{display:inline;margin-left:10px}
+  .event::before{top:.7em}
+  .slogan-intro{display:block;margin-top:-.5em}
+  .slogan-intro span{display:block}
+  .dec16-grid{grid-template-columns:minmax(0,1fr);gap:34px}
+  .dec16-copy{border-left:0;border-top:1px solid var(--rule);padding:20px 0 0}
+  .record{grid-template-columns:minmax(0,1fr);gap:8px}
+  .record-body{grid-template-columns:minmax(0,1fr);gap:4px}
+  .footer-inner{grid-template-columns:minmax(0,1fr)}
+  .footer-meta{text-align:left;white-space:normal}
+  .quote-attribution{margin-left:0}
+}
+@media (max-width:520px){
+  .hero h1 .two{margin-left:.06em}
+  .hero-top{font-size:13px;letter-spacing:.13em;gap:14px}
+  .hero-kicker{font-size:14px;letter-spacing:.2em}
+  .hero-dek{font-size:18px}
+  .hero-bottom{font-size:13px;letter-spacing:.1em}
+  .scroll-cue i{width:30px}
+  .chapter{padding-top:64px;padding-bottom:64px}
+  .chapter-head{margin-bottom:38px}
+  .chapter-title{font-size:clamp(30px,8vw,40px)}
+  .context-lead span + span{margin-top:.4em}
+  .context-row{grid-template-columns:6.2em 1fr;gap:10px}
+  .figure{font-size:clamp(62px,19vw,98px)}
+  .casualty{gap:6px 16px}
+  .casualty b{font-size:19px}
+  .slogan-btn{grid-template-columns:2.5em minmax(0,1fr) 16px;gap:10px}
+  .slogan-fact{grid-template-columns:2.5em minmax(0,1fr);gap:10px}
+  .slogan-text{font-size:clamp(25px,7.6vw,36px)}
+  .timeline,.timeline-cap{min-width:680px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+    scroll-behavior:auto !important;
+  }
+  .js .reveal,.js .sequence > *,.qchar{
+    opacity:1 !important;
+    transform:none !important;
+    filter:none !important;
+  }
+  .event-list::before{transform:scaleY(1) !important}
+  .event::before{transform:scale(1) !important}
+  .hero-kicker,.hero h1,.hero-dek,.hero-aside,.hero-bottom,.hero-quote{animation:none !important}
+  .hist img,.tl-thumb{transition-duration:0s !important}
+}
+</style>
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+<header class="hero" id="top">
+  <div class="hero-ghost" aria-hidden="true">1935</div>
+  <svg class="hero-lines" viewBox="0 0 1200 760" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+    <path d="M-40 455 C 220 425 430 500 675 465 S 1030 390 1240 430" fill="none" stroke="currentColor" stroke-width="1"/>
+    <path d="M-40 505 C 255 472 470 548 720 510 S 1045 440 1240 482" fill="none" stroke="currentColor" stroke-width="1"/>
+    <path d="M-40 555 C 245 526 500 592 760 556 S 1065 492 1240 532" fill="none" stroke="currentColor" stroke-width="1"/>
+    <path d="M-40 605 C 225 582 485 638 745 604 S 1060 548 1240 586" fill="none" stroke="currentColor" stroke-width="1"/>
+    <path class="accent" d="M-40 480 C 250 450 455 522 705 487 S 1040 418 1240 458" fill="none" stroke="currentColor" stroke-width="1"/>
+  </svg>
+  <div class="hero-inner">
+    <div class="hero-top">
+      <span>北平 · 一九三五</span>
+      <span><b>九十一周年</b> ／ 纪念</span>
+    </div>
+
+    <div class="hero-main">
+      <div class="hero-copy">
+        <p class="hero-kicker">一二·九运动九十一周年</p>
+        <h1 aria-label="一二·九"><span>一</span><span class="two">二</span><span class="dot">·</span><span class="nine">九</span></h1>
+        <p class="hero-dek">一九三五年十二月九日，北平。</p>
+      </div>
+      <aside class="hero-aside" aria-label="纪念信息">
+        <div class="seal" aria-hidden="true">九十<br>一<br>周年</div>
+        <p class="hero-vertical">一九三五</p>
+        <p class="hero-date">1935.12.09</p>
+      </aside>
+    </div>
+
+    <div class="hero-quote">
+      <p class="hero-quote-text">华北之大，<br>已经安放不得一张平静的书桌了！</p>
+      <p class="hero-quote-src">——国立清华大学学生自治会救国委员会《告全国民众书》，<span class="term">1935年12月9日作，12月10日发表</span></p>
+    </div>
+
+    <div class="hero-bottom">
+      <p>一九三五年十二月 — 一九三六年二月</p>
+      <a class="scroll-cue" href="#context">向下阅读<i aria-hidden="true"></i></a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="chapter" id="context" aria-labelledby="context-title">
+    <div class="chapter-inner">
+      <header class="chapter-head reveal">
+        <p class="chapter-no">01</p>
+        <h2 class="chapter-title" id="context-title">华北告急</h2>
+        <p class="chapter-kicker">背景</p>
+      </header>
+
+      <div class="context">
+        <div class="context-lead reveal">
+          <span>一九三五年，</span>
+          <span>日本策动华北五省<span class="red">「自治」</span>。</span>
+          <span>国民党当局对日妥协。</span>
+        </div>
+
+        <div class="context-body">
+          <p class="reveal">华北的局势压到北平。十二月九日，<br>北平<span class="term">大中学生</span>六千余人走上街头。</p>
+          <p class="reveal">他们先到新华门前请愿，随后改为示威游行。<span class="term">这一天，后来被称为一二·九运动</span>。</p>
+          <p class="reveal">1935年11月25日，日本扶植汉奸殷汝耕在河北通县成立「冀东防共自治委员会」，控制冀东二十二个县。</p>
+
+          <div class="context-table reveal" role="table" aria-label="一九三五年华北局势">
+            <div class="context-row" role="row">
+              <div class="context-key" role="rowheader">日本</div>
+              <div class="context-value" role="cell">策动华北五省「自治」</div>
+            </div>
+            <div class="context-row" role="row">
+              <div class="context-key" role="rowheader">国民党当局</div>
+              <div class="context-value" role="cell">对日妥协</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chapter-note reveal">
+        <p>1935年6月，何梅协定迫使国民党中央军撤出河北（含北平、天津）；秦土协定又使中国驻军和国民党党部退出察哈尔东部。两个协定实际上把河北、察哈尔大部分主权奉送给日本。所谓「自治」，不是一句口号，而是有文件支撑的步步进逼。北平成了华北危局的最前线。</p>
+        <p>11月1日，北平、天津十所大中学校学生自治会联名发表《为抗日救国争自由宣言》。11月18日，北平市学生联合会成立。</p>
+        <p>日本在华北的扩张，使国民党当局与日本的矛盾加深。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="chapter" id="dec9" aria-labelledby="dec9-title">
+    <div class="chapter-inner">
+      <header class="chapter-head reveal">
+        <p class="chapter-no">02</p>
+        <h2 class="chapter-title" id="dec9-title">十二月九日</h2>
+        <p class="chapter-kicker">请愿与游行</p>
+      </header>
+
+      <div class="dec9-top">
+        <p class="figure reveal">六千余<small>北平大中学生</small></p>
+      </div>
+
+      <div class="event-list sequence" data-sequence>
+        <article class="event">
+          <h3 class="event-label">新华门前<small>请愿</small></h3>
+          <p class="event-text">北平<span class="term">大中学生</span>六千余人汇集新华门前，<span class="term">向国民党北平当局请愿</span>，<span class="term">提出六项要求</span>。</p>
+        </article>
+        <article class="event">
+          <h3 class="event-label">要求被拒<small>改游行</small></h3>
+          <p class="event-text"><span class="term">六项要求</span>被完全拒绝。学生改为示威游行。</p>
+        </article>
+        <article class="event">
+          <h3 class="event-label">街头<small>镇压</small></h3>
+          <p class="event-text">军警以大刀、水龙、皮鞭、木棍和枪刺镇压。<span class="term">30余人</span>被捕，<span class="term">数百人</span>受伤。</p>
+        </article>
+      </div>
+
+      <div class="casualty reveal" aria-label="十二月九日伤亡情况">
+        <span class="casualty-label">当日</span>
+        <b><em>30</em>余人被捕</b>
+        <span class="slash" aria-hidden="true">／</span>
+        <b><em>数百</em>人受伤</b>
+      </div>
+
+      <div class="hist-pair reveal">
+        <figure class="hist">
+          <picture>
+            <source srcset="images/hist-02a.webp" type="image/webp">
+            <img src="images/hist-02a.jpg" alt="校旗游行" width="900" height="662" loading="lazy" decoding="async">
+          </picture>
+          <figcaption>1935年12月9日，东北大学学生举着校旗在街头游行。</figcaption>
+        </figure>
+        <figure class="hist">
+          <picture>
+            <source srcset="images/hist-02b.webp" type="image/webp">
+            <img src="images/hist-02b.jpg" alt="军警对峙" width="600" height="355" loading="lazy" decoding="async">
+          </picture>
+          <figcaption>1935年12月9日，北平学生与前来镇压的军警搏斗。</figcaption>
+        </figure>
+      </div>
+
+      <p class="dec9-follow reveal" id="dec10">12月10日，全市学生总罢课。</p>
+
+      <div class="chapter-note reveal">
+        <p>12月9日清晨，清华学生步行至西直门，与燕京等校学生会合。当局紧闭城门，大部分人被挡在城外。他们就在城墙边召开群众大会，高呼抗日口号，陆璀代表北平学联向群众宣讲。请愿被拒后，队伍改为示威游行。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="chapter slogans" id="slogans" aria-labelledby="slogans-title">
+    <div class="chapter-inner">
+      <header class="chapter-head reveal">
+        <p class="chapter-no">03</p>
+        <h2 class="chapter-title" id="slogans-title">四句口号</h2>
+        <p class="chapter-kicker">当日</p>
+      </header>
+
+      <div class="slogan-intro reveal">
+        <span>一九三五年十二月九日，北平。<br>12月8日，蒋南翔已草拟《告全国民众书》；第二天，学生走上街头。</span>
+        <span>点击或悬停，展开同日史实。</span>
+      </div>
+
+      <div class="slogan-list">
+        <div class="slogan">
+          <button class="slogan-btn" type="button" aria-expanded="false" aria-controls="slogan-panel-1">
+            <span class="slogan-no">01</span>
+            <span class="slogan-text">打倒日本帝国主义</span>
+            <span class="slogan-toggle" aria-hidden="true"></span>
+          </button>
+          <div class="slogan-panel" id="slogan-panel-1" aria-hidden="true">
+            <div class="slogan-panel-inner">
+              <div class="slogan-fact">
+                <span class="slogan-fact-label">史实</span>
+                <p>针对日本的侵略：一九三五年，日本策动<span class="term">华北五省「自治」</span>。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slogan">
+          <button class="slogan-btn" type="button" aria-expanded="false" aria-controls="slogan-panel-2">
+            <span class="slogan-no">02</span>
+            <span class="slogan-text">反对华北自治</span>
+            <span class="slogan-toggle" aria-hidden="true"></span>
+          </button>
+          <div class="slogan-panel" id="slogan-panel-2" aria-hidden="true">
+            <div class="slogan-panel-inner">
+              <div class="slogan-fact">
+                <span class="slogan-fact-label">史实</span>
+                <p>直接针对这个方案：日本策动华北五省「自治」，华北主权危急。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slogan">
+          <button class="slogan-btn" type="button" aria-expanded="false" aria-controls="slogan-panel-3">
+            <span class="slogan-no">03</span>
+            <span class="slogan-text">停止内战，一致对外</span>
+            <span class="slogan-toggle" aria-hidden="true"></span>
+          </button>
+          <div class="slogan-panel" id="slogan-panel-3" aria-hidden="true">
+            <div class="slogan-panel-inner">
+              <div class="slogan-fact">
+                <span class="slogan-fact-label">史实</span>
+                <p>针对当局的政策：国民党当局对日妥协，抗日救亡成为学生的直接诉求。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slogan">
+          <button class="slogan-btn" type="button" aria-expanded="false" aria-controls="slogan-panel-4">
+            <span class="slogan-no">04</span>
+            <span class="slogan-text">武装保卫华北</span>
+            <span class="slogan-toggle" aria-hidden="true"></span>
+          </button>
+          <div class="slogan-panel" id="slogan-panel-4" aria-hidden="true">
+            <div class="slogan-panel-inner">
+              <div class="slogan-fact">
+                <span class="slogan-fact-label">史实</span>
+                <p>针对华北的处境：华北主权危急，六千余名学生为此走上街头。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <figure class="hist hist-right hist-small reveal">
+        <picture>
+          <source srcset="images/hist-03.webp" type="image/webp">
+          <img src="images/hist-03.jpg" alt="女学生演讲" width="800" height="1068" loading="lazy" decoding="async">
+        </picture>
+        <figcaption>1935年12月，清华大学学生陆璀在北平西直门外向市民演讲。</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="chapter" id="dec16" aria-labelledby="dec16-title">
+    <div class="chapter-inner">
+      <header class="chapter-head reveal">
+        <p class="chapter-no">04</p>
+        <h2 class="chapter-title" id="dec16-title">十二月十六日</h2>
+        <p class="chapter-kicker">七日后</p>
+      </header>
+
+      <p class="dec16-lead reveal">冀察政务委员会原定这一天在北平成立。<br>学生决定在成立当天再上一次街。</p>
+
+      <div class="dec16-grid">
+        <div class="reveal">
+          <div class="dec16-date">
+            <span>七日后</span>
+            <b>1935.12.16</b>
+            <span>北平 · 天桥</span>
+          </div>
+          <p class="figure">三万余<small>天桥市民大会</small></p>
+        </div>
+
+        <div class="dec16-copy reveal">
+          <p>会后游行再遭镇压，伤三百余人。</p>
+          <p>当局被迫宣布冀察政务委员会<span class="red">延期成立</span>。</p>
+        </div>
+      </div>
+
+      <figure class="hist hist-right hist-medium reveal">
+        <picture>
+          <source srcset="images/hist-04.webp" type="image/webp">
+          <img src="images/hist-04.jpg" alt="珠市口游行" width="600" height="376" loading="lazy" decoding="async">
+        </picture>
+        <figcaption>1935年12月16日，游行队伍经过北平珠市口。</figcaption>
+      </figure>
+
+      <div class="chapter-note reveal">
+        <p>天桥广场上，一万多名学生和两万多名市民合计三万余人。</p>
+        <p>12月16日，北平学生和市民再次走上街头，反对冀察政务委员会成立。这次行动由北平学联组织。</p>
+        <p>会后队伍向前门、宣武门方向行进。城内外学生与市民一起游行到前门外，受到军警阻拦，随后在前门外广场再次举行市民大会。</p>
+        <p>沿途军警再次镇压，数十人被捕。这次行动距12月9日只有七天。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="chapter" id="after" aria-labelledby="after-title">
+    <div class="chapter-inner">
+      <header class="chapter-head reveal">
+        <p class="chapter-no">05</p>
+        <h2 class="chapter-title" id="after-title">余波</h2>
+        <p class="chapter-kicker">十二月到二月</p>
+      </header>
+
+      <p class="after-lead reveal">运动没有停在十二月九日。</p>
+
+      <div class="record-list">
+        <article class="record" id="jan">
+          <p class="record-date">1936.01</p>
+          <div class="record-body">
+            <h3 class="record-title">南下扩大宣传团</h3>
+            <p class="record-text">平津学联组织五百人左右，把抗日主张带到农村。</p>
+          </div>
+        </article>
+
+        <article class="record" id="feb">
+          <p class="record-date">02.01</p>
+          <div class="record-body">
+            <h3 class="record-title">中华民族解放先锋队</h3>
+            <p class="record-text">在北平成立。</p>
+          </div>
+        </article>
+      </div>
+
+      <figure class="hist hist-right hist-small reveal">
+        <picture>
+          <source srcset="images/hist-05.webp" type="image/webp">
+          <img src="images/hist-05.jpg" alt="长辛店宣传" width="600" height="658" loading="lazy" decoding="async">
+        </picture>
+        <figcaption>1936年1月，平津学生南下扩大宣传团在长辛店向铁路工人宣传。</figcaption>
+      </figure>
+
+      <div class="chapter-note reveal">
+        <p>南下宣传团在长辛店向铁路工人宣传，把抗日主张带到工人中去。他们从北平出发，一路向河北农村行进。1936年2月1日，为把抗日救亡坚持下去，中华民族解放先锋队在宣传团的基础上于北平成立。此后，它成为党开展抗日救国活动的得力助手。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="chapter quote-section" id="quote" aria-labelledby="quote-title">
+    <div class="chapter-inner">
+      <div class="quote-head reveal">
+        <div>
+          <p class="chapter-no">06</p>
+          <h2 class="chapter-title" id="quote-title" style="margin-top:18px">一句引文</h2>
+        </div>
+        <span class="quote-mark" aria-hidden="true">「</span>
+      </div>
+
+      <p class="quote-context reveal">这份由国立清华大学学生自治会救国委员会起草、蒋南翔执笔的文告，全称《告全国民众书》，开篇写道：「现在，一切幻想，都给铁的事实粉碎了！『安心读书吗』？」蒋南翔当时任清华大学地下党支部书记。</p>
+
+      <div class="quote-block">
+        <blockquote class="quote-text" data-quote="华北之大，已经安放不得一张平静的书桌了！" aria-hidden="true"><span class="quote-line">华北之大，</span><br><span class="quote-line">已经安放不得</span><br><span class="quote-line">一张平静的书桌了！</span></blockquote>
+        <p class="sr-only">华北之大，已经安放不得一张平静的书桌了！</p>
+      </div>
+
+      <div class="quote-attribution reveal">
+        <p class="name">蒋南翔　起草</p>
+        <p class="work">国立清华大学学生自治会救国委员会《告全国民众书》</p>
+        <span class="date">一九三五年十二月九日作，十二月十日发表</span>
+      </div>
+
+      <figure class="hist hist-right hist-doc reveal">
+        <picture>
+          <source srcset="images/hist-06.webp" type="image/webp">
+          <img src="images/hist-06.jpg" alt="告全国民众书" width="800" height="1128" loading="lazy" decoding="async">
+        </picture>
+        <figcaption>1935年12月，国立清华大学学生自治会救国委员会《告全国民众书》。</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="chapter" id="chrono" aria-labelledby="chrono-title">
+    <div class="chapter-inner">
+      <header class="chapter-head reveal">
+        <p class="chapter-no">07</p>
+        <h2 class="chapter-title" id="chrono-title">从十二月到二月</h2>
+        <p class="chapter-kicker">事件索引</p>
+      </header>
+
+      <div class="chrono-note reveal">
+        <span>按事件先后排列 · 示意排布，非等比</span>
+        <span><span class="hint-wide">点击日期，定位正文</span><span class="hint-narrow">横向滑动 · 点击定位</span></span>
+      </div>
+
+      <div class="timeline-scroll reveal" role="region" aria-label="一九三五年十二月至一九三六年二月时间轴" tabindex="0">
+        <div class="timeline-cap" aria-hidden="true">
+          <span>1935.12</span>
+          <span>1936.02</span>
+        </div>
+        <div class="timeline sequence" data-sequence>
+          <div class="tl-item">
+            <a class="tl-btn" href="#dec9" data-target="#dec9">
+              <picture class="tl-thumb-wrap">
+                <source srcset="images/hist-02a.webp" type="image/webp">
+                <img class="tl-thumb" src="images/hist-02a.jpg" alt="校旗游行" width="64" height="64" loading="lazy" decoding="async">
+              </picture>
+              <span class="tl-date">12.09</span>
+              <span class="tl-name">一二·九</span>
+              <span class="tl-sub">请愿与游行</span>
+            </a>
+          </div>
+          <div class="tl-item">
+            <a class="tl-btn" href="#dec10" data-target="#dec10">
+              <picture class="tl-thumb-wrap">
+                <source srcset="images/hist-08.webp" type="image/webp">
+                <img class="tl-thumb" src="images/hist-08.jpg" alt="罢课宣言" width="64" height="64" loading="lazy" decoding="async">
+              </picture>
+              <span class="tl-date">12.10</span>
+              <span class="tl-name">总罢课</span>
+              <span class="tl-sub">全市</span>
+            </a>
+          </div>
+          <div class="tl-item">
+            <a class="tl-btn" href="#dec16" data-target="#dec16">
+              <picture class="tl-thumb-wrap">
+                <source srcset="images/hist-04.webp" type="image/webp">
+                <img class="tl-thumb" src="images/hist-04.jpg" alt="珠市口游行" width="64" height="64" loading="lazy" decoding="async">
+              </picture>
+              <span class="tl-date">12.16</span>
+              <span class="tl-name">天桥大会</span>
+              <span class="tl-sub">三万余</span>
+            </a>
+          </div>
+          <div class="tl-item">
+            <a class="tl-btn" href="#jan" data-target="#jan">
+              <picture class="tl-thumb-wrap">
+                <source srcset="images/hist-05.webp" type="image/webp">
+                <img class="tl-thumb" src="images/hist-05.jpg" alt="长辛店宣传" width="64" height="64" loading="lazy" decoding="async">
+              </picture>
+              <span class="tl-date">1936.01</span>
+              <span class="tl-name">南下宣传团</span>
+              <span class="tl-sub">五百人左右</span>
+            </a>
+          </div>
+          <div class="tl-item">
+            <a class="tl-btn" href="#feb" data-target="#feb">
+              <picture class="tl-thumb-wrap">
+                <source srcset="images/hist-07.webp" type="image/webp">
+                <img class="tl-thumb" src="images/hist-07.jpg" alt="民先队小册子" width="64" height="64" loading="lazy" decoding="async">
+              </picture>
+              <span class="tl-date">02.01</span>
+              <span class="tl-name">民先队</span>
+              <span class="tl-sub">中华民族解放先锋队</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <p class="footer-title">一二·九 · 九十一周年</p>
+      <p class="footer-source">史料依据<span class="term">《中国共产党历史》第一卷</span>（<span class="term">中共中央党史研究室</span>）。</p>
+    </div>
+    <p class="footer-meta">一九三五 — 一九三六<br>北平</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+
+  var root = document.documentElement;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  /* reading progress */
+  var bar = document.getElementById('progressBar');
+  var ticking = false;
+  function updateProgress(){
+    var doc = document.documentElement;
+    var max = doc.scrollHeight - window.innerHeight;
+    var p = max > 0 ? doc.scrollTop / max : 0;
+    bar.style.transform = 'scaleX(' + Math.min(1, Math.max(0, p)) + ')';
+    ticking = false;
+  }
+  function onScroll(){
+    if (!ticking){
+      ticking = true;
+      window.requestAnimationFrame(updateProgress);
+    }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', onScroll);
+  updateProgress();
+
+  /* reveal */
+  var revealEls = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+  var sequences = Array.prototype.slice.call(document.querySelectorAll('[data-sequence]'));
+
+  sequences.forEach(function(seq){
+    Array.prototype.forEach.call(seq.children, function(child, i){
+      child.style.setProperty('--i', i);
+    });
+  });
+
+  function showAll(){
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+    sequences.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  if (!('IntersectionObserver' in window) || reduce.matches){
+    showAll();
+  } else {
+    var io = new IntersectionObserver(function(entries, obs){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.12, rootMargin:'0px 0px -8% 0px'});
+
+    revealEls.forEach(function(el){ io.observe(el); });
+    sequences.forEach(function(el){ io.observe(el); });
+  }
+
+  /* slogan accordion */
+  var slogans = Array.prototype.slice.call(document.querySelectorAll('.slogan'));
+  var pinned = null;
+
+  function setOpen(target){
+    slogans.forEach(function(item){
+      var open = item === target;
+      item.classList.toggle('is-open', open);
+      var btn = item.querySelector('.slogan-btn');
+      if (btn) btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      var panel = item.querySelector('.slogan-panel');
+      if (panel) panel.setAttribute('aria-hidden', open ? 'false' : 'true');
+    });
+  }
+
+  slogans.forEach(function(item){
+    var btn = item.querySelector('.slogan-btn');
+    if (!btn) return;
+
+    btn.addEventListener('click', function(){
+      if (item.classList.contains('is-open') && pinned === item){
+        pinned = null;
+        setOpen(null);
+      } else {
+        pinned = item;
+        setOpen(item);
+      }
+    });
+
+    btn.addEventListener('mouseenter', function(){
+      if (window.matchMedia('(hover: hover) and (pointer: fine)').matches){
+        setOpen(item);
+      }
+    });
+  });
+
+  var sloganList = document.querySelector('.slogan-list');
+  if (sloganList){
+    sloganList.addEventListener('mouseleave', function(){
+      setOpen(pinned);
+    });
+  }
+
+  /* quote: reveal once */
+  var quote = document.getElementById('quote');
+  var quoteText = document.querySelector('.quote-text');
+  if (quote && quoteText){
+    var raw = quoteText.getAttribute('data-quote') || quoteText.textContent || '';
+    var closing = '，。！？；：、）》」』”’';
+    var lineNodes = quoteText.querySelectorAll('.quote-line');
+    var lines = [];
+    if (lineNodes.length){
+      Array.prototype.forEach.call(lineNodes, function(el){
+        lines.push(el.textContent || '');
+      });
+    } else {
+      lines.push(raw);
+    }
+    quoteText.textContent = '';
+    var charIndex = 0;
+    lines.forEach(function(lineText, lineIndex){
+      var line = document.createElement('span');
+      line.className = 'quote-line';
+      var units = [];
+      Array.prototype.forEach.call(lineText, function(ch){
+        if (units.length && closing.indexOf(ch) !== -1){
+          units[units.length - 1] += ch;
+        } else {
+          units.push(ch);
+        }
+      });
+      units.forEach(function(ch){
+        var span = document.createElement('span');
+        span.className = 'qchar';
+        span.textContent = ch;
+        span.style.setProperty('--i', charIndex++);
+        line.appendChild(span);
+      });
+      quoteText.appendChild(line);
+      if (lineIndex < lines.length - 1) quoteText.appendChild(document.createElement('br'));
+    });
+
+    if (!('IntersectionObserver' in window) || reduce.matches){
+      quote.classList.add('is-in');
+    } else {
+      var qio = new IntersectionObserver(function(entries, obs){
+        if (entries[0] && entries[0].isIntersecting){
+          quote.classList.add('is-in');
+          obs.disconnect();
+        }
+      }, {threshold:0.35});
+      qio.observe(quote);
+    }
+  }
+
+  /* timeline anchors */
+  var tlButtons = Array.prototype.slice.call(document.querySelectorAll('.tl-btn'));
+  tlButtons.forEach(function(btn){
+    btn.addEventListener('click', function(event){
+      var targetSelector = btn.getAttribute('data-target');
+      var target = targetSelector ? document.querySelector(targetSelector) : null;
+      if (!target) return;
+
+      event.preventDefault();
+      tlButtons.forEach(function(b){ b.removeAttribute('aria-current'); });
+      btn.setAttribute('aria-current', 'location');
+      target.scrollIntoView({behavior: reduce.matches ? 'auto' : 'smooth', block:'start'});
+
+      if (history.replaceState){
+        try { history.replaceState(null, '', targetSelector); } catch (err) {}
+      }
+    });
+  });
+
+  if (reduce.addEventListener){
+    reduce.addEventListener('change', function(e){
+      if (e.matches) showAll();
+    });
+  }
+})();
+</script>
+</body>
+</html>
